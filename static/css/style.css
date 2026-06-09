@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f4f8;
+    color: #1a1a2e;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(135deg, #2563eb, #1a1a2e);
+    color: white;
+    text-align: center;
+    padding: 32px 20px;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 1rem;
+    opacity: 0.85;
+}
+
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.form-card {
+    background: white;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    margin-bottom: 32px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #1a1a2e;
+    font-size: 0.95rem;
+}
+
+textarea, input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: border-color 0.2s;
+    outline: none;
+}
+
+textarea:focus, input[type="number"]:focus {
+    border-color: #2563eb;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* Upload Area */
+.upload-area {
+    border: 2px dashed #cbd5e1;
+    border-radius: 10px;
+    padding: 28px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    position: relative;
+    background: #f8fafc;
+}
+
+.upload-area:hover {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+.upload-area input[type="file"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+
+.upload-area p {
+    color: #64748b;
+    font-size: 0.9rem;
+    pointer-events: none;
+}
+
+.upload-success {
+    margin-top: 10px;
+    color: #16a34a;
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.upload-error {
+    margin-top: 10px;
+    color: #dc2626;
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.divider {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.85rem;
+    margin: 4px 0 20px;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 14px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+button:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Schedule Output */
+.schedule-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.day-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border-left: 4px solid #2563eb;
+}
+
+.day-label {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #2563eb;
+    margin-bottom: 12px;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 0.9rem;
+}
+
+.task-item:last-child {
+    border-bottom: none;
+}
+
+.task-topic {
+    color: #1a1a2e;
+    font-weight: 500;
+}
+
+.task-hours {
+    color: #2563eb;
+    font-weight: 600;
+    font-size: 0.85rem;
+    background: #eff6ff;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+/* Quiz */
+.quiz-question {
+    background: white;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.quiz-question p {
+    font-weight: 600;
+    margin-bottom: 14px;
+    font-size: 0.95rem;
+    color: #1a1a2e;
+}
+
+.option-btn {
+    width: 100%;
+    text-align: left;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    background: #f8fafc;
+    color: #1a1a2e;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.option-btn:hover {
+    background: #eff6ff;
+    border-color: #2563eb;
+    transform: none;
+}
+
+.option-btn.correct {
+    background: #f0fdf4;
+    border-color: #16a34a;
+    color: #16a34a;
+}
+
+.option-btn.wrong {
+    background: #fef2f2;
+    border-color: #dc2626;
+    color: #dc2626;
+}
+
+.option-btn:disabled {
+    cursor: not-allowed;
+    background: #f8fafc;
+}
+
+.score-card {
+    background: linear-gradient(135deg, #2563eb, #1a1a2e);
+    color: white;
+    border-radius: 12px;
+    padding: 28px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.score-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.score-card p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.error-msg {
+    background: #fef2f2;
+    color: #dc2626;
+    padding: 14px 18px;
+    border-radius: 8px;
+    border-left: 4px solid #dc2626;
+    font-weight: 500;
+}
